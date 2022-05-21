@@ -1,0 +1,108 @@
+body{
+    position: relative;
+}
+.login{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    left: 300px;
+    top: 45px;
+    width: 400px;
+    height: 100px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+}
+.sign{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    left: 300px;
+    top: 50px;
+    width: 400px;
+    height: 100px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+}
+#signform{
+    width: 400px;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+td,th{
+    border: 3px solid white;
+}
+table{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: white;
+    width: 720px;
+    height: auto;
+    font-size: 25px;
+    border: 2px solid white;
+    font-family: 'Orbitron', sans-serif;
+
+}
+#loginform{
+    width: 400px;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.control{
+    width: 250px;
+    height: 30px;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+    color: white;
+    font-size: 25px;
+}
+.control:focus {
+    outline:none;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+}
+.btn:hover{
+    width: 120px;
+    font-size: 27px;
+}
+.signin{
+    text-decoration: line-through;
+    border: 3px solid white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    border-radius: 10px ;
+    position:absolute;
+    top: 20px;
+    color: white;
+    padding: 5px;
+}
+#flash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 107, 0.623);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }

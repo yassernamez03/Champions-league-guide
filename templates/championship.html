@@ -1,0 +1,10 @@
+{%extends 'sports.html'%}
+{%block championship%}
+{% for team in teams %}
+    <div class="team" id="{{team.logo}}" >
+        <h3 style="margin: 0;padding:0;">{{team.name}}</h3>        
+        <img src="{{url_for('static',filename='/images/teams/' + team.logo)}}" alt="team" width="130px" height="100px" class="img">
+        <span><a class="learn" href="/more/{{team.name}}">Learn More</a></span>
+    </div>
+{% endfor %}  
+{%endblock%}

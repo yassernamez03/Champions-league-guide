@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block login %}
+<a href="{{url_for('signup')}}" class="signin">SignUp</a> {% with messages = get_flashed_messages()%} {% if messages %} {% for msg in messages%}
+{% endfor %} {% endif%} {% endwith %}
+<div class="login">
+    <h3 class="h3">Welcom to login</h3>
+    <form action="login" method="post" id="loginform">
+        {{form.hidden_tag()}} 
+        {{form.name.label(class="label")}} 
+        {{form.name(class="control")}} 
+        {{form.password.label(class="label")}}        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <span id="flash">
+        <img src="{{url_for('static',filename='/images/flash.png')}}" width="30px" height="30px">{{message}}</span>
+        {% endfor %}
+        {% endif %}
+        {% endwith %} 
+        {{form.password(class="control")}}
+
+        {{form.submit(class="btn")}}
+    </form>
+</div>
+{% endblock login%}

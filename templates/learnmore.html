@@ -1,0 +1,17 @@
+{%extends 'sports.html'%}
+{%block learnmore%}
+<a href="{{url_for('championship')}}" class="signin" style="left:150px ;">Return</a>
+<div class="main">
+    <div class="team_img">
+        <h3>{{team.name}}</h3>
+        <img src="{{url_for('static',filename='/images/teams/' + team.logo)}}" width="300px" height="300px">
+    </div>
+    <div class="cups">
+        <p style="color:white;font-family: 'Orbitron', sans-serif;font-size:21px;margin:0;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, officia! Iure delectus saepe officiis, rerum eum necessitatibus quam consequatur, alias laborum ipsam eveniet illo, harum excepturi non praesentium! Voluptates, quidem.</p>
+        {%for cup in team.cups%}
+        <span class="cup">{{cup.year}}</span>
+        {%endfor%}
+    </div>
+</div>
+
+{%endblock%}

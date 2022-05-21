@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block signup %}
+<a href="{{url_for('login')}}" class="signin">LogIn</a>
+<div class="sign">
+    <h3 class="h3">Welcom to Signup</h3>
+    <form action="signup " method="post" id="signform">
+        {{Sform.hidden_tag()}} 
+        {{Sform.name.label(class="label")}} 
+        {{Sform.name(class="control")}} 
+        {{Sform.email.label(class="label")}} 
+        {{Sform.email(class="control")}} 
+        {{Sform.password.label(class="label")}}
+        {{Sform.password(class="control")}}
+        {{Sform.confirm.label(class="label")}}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <span id="flash"><img src="{{url_for('static',filename='/images/flash.png')}}" width="30px" height="30px">{{message}}</span>
+        {% endfor %}
+        {% endif %}
+        {% endwith %} 
+        {{Sform.confirm(class="control")}} 
+        {{Sform.submit(class="btn")}}
+    </form>
+</div>
+{% endblock signup %}
